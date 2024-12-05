@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Deleting an article {% endblock  %}
+
+{% block content %}
+    <div class="features">
+        <h1 class="page_title" style="background-color:rgb(255, 99, 71); color:green;">FORM for deleting an ARTICLE</h1>
+        <form method="post" >
+            {% csrf_token %}<br>
+            <button class="btn btn-success" type="submit" >TO DELETE an Article</button>
+        </form>
+    </div>
+{% endblock  %}

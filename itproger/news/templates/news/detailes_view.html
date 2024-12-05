@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} {{ article.title }} {% endblock  %}
+
+{% block content %}
+    <div class="features" style="margin-bottom: 50px">
+        <h1 class="page_title" style="background-color:rgb(255, 99, 71); color:green;">{{ article.title }}</h1>
+        <h3>{{ article.anons }}</h3>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        <a href="{% url 'news-delete' article.id %}" class="btn btn-danger" >DELETE</a>
+        <a href="{% url 'news-update' article.id %}" class="btn btn-info" >EDIT</a>
+    </div>
+{% endblock  %}

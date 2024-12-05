@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} NEWS on SITE {% endblock  %}
+
+{% block content %}
+    <div class="features">
+        <h1 class="page_title" style="background-color:rgb(255, 99, 71); color:green; margin-bottom: 40px">NEWS on SITE!!!!!!!!!</h1>
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                    <a href = "{% url 'news-detail' el.id %}" class="btn btn-warning">TO READ in more detail</a>
+                </div>
+            {% endfor  %}
+        {% else %} <p>YOU HAVE NO NOTES!!!</p>
+        {% endif %}
+        {# Comments #}
+    </div>
+{% endblock  %}
+

@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Page about{% endblock  %}
+
+{% block content %}
+  <div class="features">
+    <h1 class="page_title" style="background-color:rgb(92, 99, 71); color:yellow;">PAGE ABOUT</h1>
+    <p style="color:DodgerBlue;">Serving the files
+        In addition to these configuration steps, you’ll also need to
+        actually serve the static files.
+        During development, if you use django.contrib.staticfiles,
+        this will be done automatically by runserver when DEBUG is set
+        to True (see django.contrib.staticfiles.views.serve()).
+        This method is grossly inefficient and probably insecure, so
+        it is unsuitable for production.
+        See How to deploy static files for proper strategies to
+        serve static files in production environments</p>
+    <a href="https://www.facebook.com/PhotographicMercadillo" target="_blank" ><button class="btn btn-danger"> GO on MERCADILLO page</button></a>
+  </div>
+
+{% endblock  %}
+
